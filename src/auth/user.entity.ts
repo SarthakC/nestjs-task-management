@@ -13,7 +13,7 @@ import { Task } from 'src/tasks/task.entity';
 @Unique(['username'])
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column()
   username: string;

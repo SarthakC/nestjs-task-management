@@ -23,5 +23,8 @@ export class Task extends BaseEntity {
   status: TaskStatus;
 
   @ManyToOne((type) => User, (user) => user.tasks, { eager: false })
-  user: User[];
+  user: User;
+
+  @Column()
+  userId: User['id'];
 }
